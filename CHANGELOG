@@ -1,0 +1,22 @@
+===================================================
+======= Personal Folding Stats Site Scripts =======
+======= Updated 10/07/10 - Drezha           =======
+===================================================
+Linux
+===================================================
+v1.0
+~ Basic functionality - Average currently not working.
+
+
+Windows
+===================================================
+v1.02
+~ Tail now seems to store only 29 lines so upped the line limit to 30 again
+
+v1.01
+~ Changed graphs to output to slightly taller graph and put graph title in graph
+~ Added overall points graph to show points since starting
+
+v1.0
+~ Basic funtionality to create graphs and if needed upload them to an FTP server
+~ Windows only functionality currently
