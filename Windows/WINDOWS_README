@@ -1,0 +1,61 @@
+===================================================
+======= Personal Folding Stats Site Scripts =======
+======= Updated 30/03/10 - Drezha           =======
+===================================================
+
+
+
+README
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Contents
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+i. Aim
+ii. Requirements
+iii. Usage
+
+
+i. Aim
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This script is to allow users to create and
+maintain their own graphs for Folding@home stats.
+Various reasons occur for someone wanting to keep
+stats for themselves - sometimes stats sites go
+offline for various reasons or a site may not cater
+for the stats the user requires. The aim of this
+script files are so that users can download data
+themselves and edit it as they see fit.
+
+Unfortunatly, at the time being, data is gethered
+from the Extreme Overclokcing site and takes data
+from them. Whilst they continue to offer this
+service, these stats will work but if they remove
+it for any reason, then this scripts will not work.
+Until I can program them to store data itself, it
+is reliant on EOC offering CSV file downloads of
+data and the EOC site being up.
+
+As such, these scripts should *not* be run more
+than once ever hour. EOC only updates every 3 hours
+so ideally these should only be run about that - 
+note that the CSV show the values for the day so
+technically running these scripts once a day would
+suffice.
+
+ii. Requirements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+These scripts require some third party programs to
+allow the scripts to work. These are listed below 
+with locations. If they disappear, please let me
+know and I'll host them (as far as licences allow).
+
+GNU Plot - http://www.gnuplot.info/
+Sed - http://gnuwin32.sourceforge.net/packages/sed.htm
+wget - http://gnuwin32.sourceforge.net/packages/wget.htm
+tail -  from Windows Server 2003 Resource Kit Tools -
+http://bit.ly/cA8kem
+
+These programs either need to be added to the
+system32 folder in the Windows folder or add the
+folder to the Windows path - http://bit.ly/cpaRRF
+
+ftp should be included in all Windows releases.
