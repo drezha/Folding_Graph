@@ -1,20 +1,22 @@
 ===================================================
 ======= Personal Folding Stats Site Scripts =======
-======= Updated 03/04/10 - Drezha           =======
+======= Updated 10/07/10 - Drezha           =======
 ===================================================
 
 
 03 - Monthly Points - Set with grep then sed? grep **/03/** | sed >> file.dat
 07 - Schedule to run regulary
-08 - Convert to linux so it's cross platform
 09 - Graphs 
 	Bar charts on days submitted results
-
-11 - 30 summary ala Free-DC
+11 - 30 Day summary of submitted units ala Free-DC
+12 - Use Folding@home data from Standford rather than EOC
+	Save to database
+13 - Get Average calculation working on Linux
 
 ===================================================
 DONE
 ===================================================
+08 - Convert to linux so it's cross platform
 04 - Webpage to display stats
 05 - Gnuplot from command line
 02 - Last 30 days summary (well, last 30 days of returns)
