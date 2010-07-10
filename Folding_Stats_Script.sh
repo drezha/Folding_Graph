@@ -14,42 +14,59 @@ PASSWD='password'
 ############################################
 
 # Backup Yesterday's Data with date
+echo "Backing up data with todays date"
 cp data.dat ./Backup/data_$(date +20%y-%m-%d).dat
+echo "Complete"
 
 # Download data from EOC
+echo "Downloading Data from Extreme Overclocking"
 wget http://folding.extremeoverclocking.com/csv/user_csv.php?u=$EOC
+echo "Complete"
 
 # Rename the file to a Windows compatible name
 # Not needed for Linux but kept in to keep both scripts similar
+echo "Renaming the downloaded data"
 mv ./user_csv.php?u=$EOC ./user.csv
+echo "Complete"
 
 # Remove the column headers
+echo "Removing column headers"
 sed /TimeStamp/d user.csv > output.csv
+echo "Complete"
 
 # Calculate work unit averages
 #wine ./Averages.exe
 
 # Replace comma's with tabs so that gnuplot can read the data
+echo "Replacing commas in file with tabs"
 sed s/,/\\t/g output.csv > data.dat
+echo "Complete"
 
 # Delete the user.csv so that next run the file can be renamed
 # Again, not needed in Linux but kept in to keep the scripts the same
 # and provide cross compatibily if being used across OS's.
+echo "Removing user.csv"
 rm "user.csv"
+echo "Complete"
 
 # Tail to get the last 30 lines of data from data.dat
-# Used to create summary graph for the last 30 day of returns
+# Used to create summary graph for the last x day of returns
+echo "Getting the last 30 days of data from data.dat"
 tail -30 data.dat > 30_Day_Data.dat
+echo "Complete"
 
 # Create gnuplot graphs
+echo "Creating graphs"
 gnuplot Points.plt
 gnuplot Points_Team_Place.plt
 gnuplot Points_WUs.plt
 gnuplot Team_Place.plt
 # gnuplot Average_WU.plt
 gnuplot Overall.plt
+echo "Complete"
 
 # Upload graphs to server
+echo "Uploading to FTP server"
 if [ $HOST = 'hostname.com' ]
 then echo "FTP not setup"
 else
