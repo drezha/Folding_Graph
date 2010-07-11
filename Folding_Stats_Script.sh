@@ -35,11 +35,8 @@ sed /TimeStamp/d user.csv > output.csv
 echo "Complete"
 
 # Calculate work unit averages
-#wine ./Averages.exe
-
-# Replace comma's with tabs so that gnuplot can read the data
-echo "Replacing commas in file with tabs"
-sed s/,/\\t/g output.csv > data.dat
+echo "Calculating averages and replacing commas in file with tabs"
+sed s/,/\\t/g output.csv | awk '$3!=0 || $2!=0{gsub(/\r/,"",$4);print $1"\t"$2"\t"$3"\t"$4"\t"$3/$2}' > data.dat
 echo "Complete"
 
 # Delete the user.csv so that next run the file can be renamed
@@ -61,7 +58,7 @@ gnuplot Points.plt
 gnuplot Points_Team_Place.plt
 gnuplot Points_WUs.plt
 gnuplot Team_Place.plt
-# gnuplot Average_WU.plt
+gnuplot Average_WU.plt
 gnuplot Overall.plt
 echo "Complete"
 
