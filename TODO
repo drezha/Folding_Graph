@@ -11,7 +11,6 @@
 11 - 30 Day summary of submitted units ala Free-DC
 12 - Use Folding@home data from Standford rather than EOC
 	Save to database
-13 - Get Average calculation working on Linux
 
 ===================================================
 DONE
@@ -29,3 +28,4 @@ DONE
 	PPD of work units completed (using HFM.net CSV output) - Frame time instead
 	Monthly charts of points + WU's
 10 - Calculations - Average points per unit
+13 - Get Average calculation working on Linux
