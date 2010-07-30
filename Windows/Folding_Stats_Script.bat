@@ -18,7 +18,7 @@ set temp=%year%-%month%-%day%
 copy data.dat .\Backup\data_%temp%.dat
 
 ::Download data from EOC
-wget http://folding.extremeoverclocking.com/csv/user_csv.php?u=504296
+wget http://folding.extremeoverclocking.com/csv/user_csv.php?u=%EOC%
 
 ::Rename the file to a Windows compatible name
 rename "user_csv.php@u=%EOC%" "user.csv"
