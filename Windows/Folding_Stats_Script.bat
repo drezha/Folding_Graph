@@ -1,7 +1,7 @@
 ::::::::::::::::::::::::::::::::::::::::::::
 :: Personal Folding at Home Stats Script
 :: Written by - Chris Salter (aka Drezha)
-:: Last Updated - 23/04/10
+:: Last Updated - 30/07/10
 ::::::::::::::::::::::::::::::::::::::::::::
 @echo off
 ::Set Variables
@@ -26,11 +26,9 @@ rename "user_csv.php@u=%EOC%" "user.csv"
 ::Remove the column headers
 sed /TimeStamp/d user.csv > output.csv
 
-::Calculate work unit averages
-Averages.exe
-
 ::Replace comma's with tabs so that gnuplot can read the data
-sed s/,/\t/g output.csv > data.dat
+::Calculate work unit averages
+sed s/,/\t/g output.csv | sed 1d | awk " {print $1,\"\t\",$2,\"\t\",$3,\"\t\",$4,\"\t\",$3/$2}" > data.dat
 
 ::Delete the user.csv so that next run the file can be renamed
 del "user.csv"
