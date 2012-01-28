@@ -22,9 +22,9 @@ All requirements should be fulfilled on Linux.
 ## iii. Usage
 1.	Download the script
 2.	Replace the variables with your own data
-3.a	EOC can be found on your profile page on EOC - it's the numbers at the end of the URL
-3. b	If you don't want to upload to FTP, leave the hostname, USER and PASSWD variable as is.
+3.	EOC can be found on your profile page on EOC - it's the numbers at the end of the URL
+4.	If you don't want to upload to FTP, leave the hostname, USER and PASSWD variable as is.
 NOTE	I'm looking at changing the script to not store the password in plain text.
-4.	Chmod the script (chmod +x ./Folding_Stats_Script.sh) to allow it to run
-5.	Ensure the .plt files (gnuplot instraction files) are in the same directory as the script
-6.	Run the script, either by double clicking in nautilus or from the command line
+5.	Chmod the script (chmod +x ./Folding_Stats_Script.sh) to allow it to run
+6.	Ensure the .plt files (gnuplot instraction files) are in the same directory as the script
+7.	Run the script, either by double clicking in nautilus or from the command line
